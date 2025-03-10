@@ -44,7 +44,7 @@ class UserDaoImpl : ExposedDao<Long>(UserTable, FriendshipTable), UserDao {
             user.name = name
             user.age = age
             user.password = password
-            user.createdAt = Instant.now()
+            user.metrics = MetricsEntity.create()
             user.tags = tags
             user
         }

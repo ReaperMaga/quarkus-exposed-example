@@ -9,7 +9,7 @@ class User : ExposedEntity() {
     var name : String by bind(UserTable.name)
     var age : Int by bind(UserTable.age)
     var password : String by bind(UserTable.password)
-    var createdAt : Instant by bind(UserTable.createdAt)
+    var metrics: MetricsEntity by bindEntity()
     var tags : List<String> by bind(UserTable.tags)
     var friends: List<User>? = null
 }
